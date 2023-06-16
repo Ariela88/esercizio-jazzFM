@@ -27,6 +27,7 @@ body {
 .logo {
     grid-area: logo;
     align-self: start;
+    padding: 20px;
     
     
     
@@ -34,9 +35,10 @@ body {
 
 .big-img {
     grid-area: bg;
-    max-width: 100%;
-    width: 100%;
-    height: 100vh;
+    
+    width: 90%;
+    height: auto;
+
 }
 
 .text-box-little {
@@ -82,7 +84,12 @@ h2 {
 }
 
 .mouth img {
-    width: 100% !important;
+
+    place-self: center;
+    width: 60%;
+
+
+;
 }
 .logo img {
     width: 100%;
@@ -92,7 +99,8 @@ h2 {
 
 .big-img img {
     width: 100%;
-    height: 100%;
+    height: vh 100% ;
+    grid-auto-flow: none;
 
 }
 
@@ -106,10 +114,24 @@ h2 {
 
 }
 
-
 .arrow img {
-    width: 70%;
+    place-self: center;
+    width: 60%;
+
 }
+
+.third-section {
+    background-color: #ffcc00;
+}
+
+.big-text-third-section {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200px;
+    
+}
+
+
 
 
 @media (max-width:480px) {
@@ -123,6 +145,8 @@ h2 {
     .mouth {
         width: 100vw;
         height: 100vw;
+        
+
 
 
     }
