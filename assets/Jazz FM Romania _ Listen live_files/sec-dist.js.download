@@ -1,0 +1,1 @@
+$(document).ready(function(){992<$(window).width()&&$("#contact, #inside-head").stick_in_parent({inner_scrolling:!1,bottoming:!0}),$(".gotop").on("click",function(){$("body,html").animate({scrollTop:0},1e3)})});
