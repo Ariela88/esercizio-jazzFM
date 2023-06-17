@@ -6,8 +6,7 @@ body * {
 
     font-family: 'Poppins';
     box-sizing: border-box;
-    width: auto;
-    height: auto;
+    
 }
 
 body {
@@ -15,62 +14,247 @@ body {
 
 }
 
-.first-section {
+.section1 { 
     background-color: #ffcc00;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 20% 1fr 50%;
-    grid-template-rows: 40% 1fr 20%;
-    grid-template-areas:
-        "logo . bg"
-        ". . bg"
-        "tbt . bg";
-    place-self: center;
-}
-
-
-.logo {
-    grid-area: logo;
-    align-self: start;
-    padding: 20px;
-
-
-
-}
-
-.big-img {
-    grid-area: bg;
-
-    width: 90%;
+    width: auto;
     height: auto;
+    display: grid;
+    grid-template-columns: 25% 25% 1fr;
+    grid-template-rows: 25% 1fr 25%;
+    grid-template-areas: "logo . play"
+    ". . play"
+    "now . play";
+
 
 }
 
-.text-box-little {
-    grid-area: tbt;
-    margin-bottom: 100px;
-    font-family: 'arial';
-    align-self: auto;
-    justify-content: start;
-    margin-left: 20px;
+.logo-img {
+    grid-area: logo;
+
 
 }
 
-.big-bg-second-section {
+.logo-svg {
+    max-width: 100%;
+    margin: 15px;
+}
+
+
+.now-play {
+
+    grid-area: now;
+    margin: 15px;
+}
+
+.play-img {
+    grid-area: play;
+
+
+}
+
+.play-svg {
+    max-width: 100%;
+
+}
+
+
+
+.section2 {
+
     background-color: #660099;
-}
-
-.text-light {
-    font-size: 20px;
+    display: block;
 }
 
 
+.section3 {
+    background-color: #ffcc00;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "b-t b-c"
+    "l-j fm1";
+   
+}
 
-h2 {
+.big-text {
+    grid-area: b-t;
+    margin: 0;
+}
+
+.big-text-inside {
+    font-size: 200px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 170px;
+    letter-spacing: -10px;
+    margin: 0;
+}
+
+.black-circle {
+    grid-area: b-c;
+
+}
+
+.black-circle-svg {
+    width: 40%;
+    float: right;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+.letter-j {
+    grid-area: l-j;
+    width: 55%;
+
+}
+
+.letter-j-svg {
+    max-width: 100%;
+margin-left: 25px;
+    margin-top: -320px;
+}
+
+.fm-list1 {
+    grid-area: fm1;
+    
+    
+    
+
+}
+
+
+.title-fm1 {
+
     font-size: 50px;
-    font-weight: 700;
 }
+.list1-element {
+    border-top: 1px solid black;
+    font-size: 30px;
+    margin: 20px;
+   
+}
+
+.space-blank {
+
+    width: 100px;
+}
+
+.section4 {
+
+    background-color: #ffcc00;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-row: 25% 1fr ;
+    grid-template-areas: "fm2 l-a" "fm2 l-a";
+
+}
+
+.letter-a {
+    grid-area: l-a;
+    width: 80%;
+}
+
+.letter-a-svg {
+    max-width: 100%;
+}
+
+.list2 {
+    grid-area: fm2;
+    margin-left: 25px;
+
+}
+
+.title-fm2 {
+
+    font-size: 50px;
+
+}
+.list2-element {
+    border-top: 1px solid black;
+    font-size: 30px;
+    margin: 20px;
+   
+}
+
+.section5 {
+    background-color: #ffcc00;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: self-start;
+padding-top: 25px;
+   
+   
+}
+
+.little-number {
+    font-size: 60px;
+    font-weight: 100;
+}
+
+
+.title-device-section {
+    font-size: 120px;
+    width: 100%;
+    text-align: right;
+    font-weight: 300;
+    border-bottom: 1px solid black;
+    margin-right: 25px;
+}
+.title-device {
+width: 50%;
+    font-size: 80px;
+    border-bottom: 1px solid black;
+    font-weight: 300;
+    padding-left: 15px;
+}
+
+.device-message {
+    width: 50%;
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    align-self: flex-end;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: right;
+    padding-right: 15px;
+}
+
+
+.letter-double-j {
+    width: 45%;
+    margin: 20px;
+}
+.letter-double-j-svg {
+    width: 100%;
+}
+
+.section6 {
+    background-color: #660099;
+    display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .last-section {
     display: grid;
@@ -98,18 +282,6 @@ h2 {
     ;
 }
 
-.logo img {
-    width: 100%;
-    height: 100%;
-    margin: 0%;
-}
-
-.big-img img {
-    width: 100%;
-    height: vh 100%;
-    grid-auto-flow: none;
-
-}
 
 .arrow {
     width: 50vw;
@@ -127,78 +299,8 @@ h2 {
 
 }
 
-.third-section {
-    background-color: #ffcc00;
-    display: grid;
-
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "btts ." "letter-j l1 ";
-}
-
-.big-text-third-section {
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 200px;
-    font-weight: bold;
-    line-height: 180px;
-    
-    box-sizing: inherit;
-    letter-spacing: -4px;
-    
-    width: 100%;
-    grid-area: btts;
 
 
-
-}
-
-.letter-j,
-{
-
-width: 100%;
-margin-left: 30px;
-grid-area: letter-j;
-
-}
-
-.letter-a {
-    width: 100%;
-    margin-top: 20%;
-    margin-right: 10%;
-}
-
-.fm-list1 {
-    grid-area: l1;
-    margin-top: -100%;
-
-
-}
-
-.list1
-{
-    font-size: 25px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
-    font-weight: lighter;
-    padding: 20px;
-    margin-right: 30px;
-
-}
-
-.title-fm {
-    font-size: 100px;
-    font-weight: 500;
-}
-
-.third-second-section {
-    background-color: #ffcc00;
-    width: 100vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-}
 
 
 
