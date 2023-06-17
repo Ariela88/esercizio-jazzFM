@@ -4,12 +4,15 @@
 
 body * {
 
+   
     font-family: 'Poppins';
     box-sizing: border-box;
     
 }
 
 body {
+    width: 100%;
+    
     margin: 0px;
 
 }
@@ -39,12 +42,30 @@ body {
     margin: 15px;
 }
 
+.now-play p {
+    line-height: 0%;
 
+}
 .now-play {
 
     grid-area: now;
     margin: 15px;
+    font-size: 16px;
+    font-weight: 200;
 }
+
+.bold-text {
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.song-text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
 
 .play-img {
     grid-area: play;
@@ -72,7 +93,7 @@ body {
     height: auto;
     display: grid;
     grid-template-columns: 70% 1fr;
-    grid-template-rows: 1fr 1fr;
+    
     grid-template-areas: "b-t b-c"
     "l-j fm1";
    
@@ -104,20 +125,27 @@ body {
     margin-top: 25px;
 }
 
-.letter-j {
+/* .letter-j {
     grid-area: l-j;
     width: 55%;
+    
 
-}
+} */
 
 .letter-j-svg {
-    max-width: 100%;
+ width: 50%;
 margin-left: 25px;
-    margin-top: -320px;
+ margin-top: -150px;
+  vertical-align: middle;
+  position: relative;
+  top: 0px;
+    
 }
 
 .fm-list1 {
     grid-area: fm1;
+    grid-row-start: 1;
+    margin-top: 300px;
     
     
     
@@ -127,13 +155,21 @@ margin-left: 25px;
 
 .title-fm1 {
 
-    font-size: 50px;
+    font-size: 100px;
+    font-weight: 300;
+    border-bottom: 1px solid ;
+    padding-bottom: -50px;
 }
-.list1-element {
-    border-top: 1px solid black;
-    font-size: 30px;
-    margin: 20px;
-   
+
+
+
+
+
+.tuner-list, .list1-element {
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 300;
+    border-bottom: 1px solid;
 }
 
 .space-blank {
@@ -156,10 +192,15 @@ margin-left: 25px;
 .letter-a {
     grid-area: l-a;
     width: 80%;
+    justify-self: center;
+    
+    
 }
 
 .letter-a-svg {
-    max-width: 100%;
+    width: 100%;
+    
+    
 }
 
 .list2 {
@@ -174,7 +215,7 @@ margin-left: 25px;
 
 }
 .list2-element {
-    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     font-size: 30px;
     margin: 20px;
    
@@ -238,7 +279,285 @@ width: 50%;
 .section6 {
     background-color: #660099;
     display: block;
+    
 
+}
+.bg-big2 {
+    width: 100%;
+}
+
+
+
+
+.section7 {
+    width: 100%;
+   
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-areas: 
+    "b-t-2 b-t-2 b-c2"
+    ". . mon-li"
+    "tue-li wed-li ."
+    ". thu-li ."
+    ". . fri-li"
+    "sat-li sun-li ."
+    ;
+
+}
+
+
+.title-sett-list {
+    border-top: none!important;
+    font-size: 100px;
+    font-weight: 300;
+
+}
+.sett-list {
+    font-size: 24px;
+    font-weight: 300;
+    
+}
+
+.sett-item-list {
+    border-top: 0.5px solid rgb(78, 78, 78);
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.big-text2 {
+    width: 50%;
+    grid-area: b-t-2;
+    line-height: 20px;
+    margin-top: -100px; 
+}
+
+.big-circle2 {
+    width: 60%;
+    grid-area: b-c2;
+   justify-self: end;
+}
+
+
+
+.mon-list {
+    width: 100%;
+    grid-area: mon-li;
+}
+.tue-list {
+    width: 100%;
+    grid-area: tue-li;
+}
+.wed-list {
+    width: 100%;
+    grid-area: wed-li;
+}
+.thu-list {
+    width: 100%;
+    grid-area: thu-li;
+}
+.fri-list {
+    width: 100%;
+    grid-area: fri-li;
+}
+.sat-list {
+    width: 100%;
+    grid-area: sat-li;
+}
+.sun-list {
+    width: 100%;
+    grid-area: sun-li;
+}
+
+
+.section8 {
+    background-color: #ffcc00;
+    width: 100%;
+    height: 100%;
+    
+    
+    
+
+}
+
+.anim-contain {
+    
+    
+    animation: 10s linear 0s infinite normal none running textscroll;
+    transform: translateX(0);
+    
+    
+    
+}
+
+.scorr-text p {
+    font-size: 200px;
+    border-top:1px solid black ;
+    border-bottom: 1px solid black;
+    
+    
+    
+}
+
+
+
+.img-keyboard {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    
+    
+
+}
+.keyboard-svg {
+    width: 60%;
+    margin: auto;
+
+   
+    
+}
+
+.section9 {
+    height: auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: ". l-j" ". l-j";
+
+    background-color:#0099ff;
+    
+}
+
+.sheep-sticky {
+    position: sticky;
+    top:0;
+    width: 100%;
+    
+  
+    
+    
+}
+
+.sheep-svg {
+    width: 70%;
+    
+}
+
+.list-jazz-title {
+    color: white;
+    font-size: 100px;
+    font-weight: 300;
+    grid-area: l-j-t;
+    margin: 0;
+
+    
+    
+}
+
+.list-jazz-item {
+    color: white;
+    font-size: 24px;
+    font-weight: 100;
+    border-top: 1px solid white;
+    padding: 30px;
+    
+}
+
+.list-jazz {
+    grid-area:l-j ;
+
+}
+
+
+.section10 {
+    background-color: #660099;
+}
+
+.bg-3 {
+    width: 100%;
+}
+
+
+.section11 {
+    background-color: #ffcc00;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 1fr;
+    grid-template-areas: ". b-c3" ". l-c";
+}
+
+.contact-sticky {
+    position: sticky;
+    top:0;
+}
+.text-sticky {
+    font-size: 200px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 170px;
+    letter-spacing: -10px;
+    margin: 0;
+}
+
+.list-contact {
+    grid-area: l-c;
+}
+
+.list-contact div {
+    padding: 24px 8px;
+    border-top: 1px solid black;
+}
+
+.black-circle3 {
+    grid-area: b-c3;
+    width: 100%;
+    
+}
+.black-circle-svg3 
+{
+    width: 25%;
+    float: right;
+    margin: 20px;
+    
+}
+
+.small-text {
+    font-size: 24px;
+    font-weight: 300;
+    
+}
+
+.text-row {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-title {
+    font-size: 116px;
+    font-weight: 300;
+    display: flex;
+    letter-spacing: -5px;                       
+
+}
+
+.social-title img {
+    width: 74px;
+
+}
+
+.medium-text {
+
+    font-size: 32px;
+    font-weight: 300;
+    padding: 48px !important;
+}
+
+.foot-text {
+    padding: 48px !important;
+    font-size: 24px;
+    font-weight: 300;
 }
 
 
@@ -246,6 +565,16 @@ width: 50%;
 
 
 
+
+
+
+
+@keyframes textscroll {
+  
+    100% {
+        transform:translateX(-5000px)  
+    }
+}
 
 
 
@@ -264,7 +593,7 @@ width: 50%;
 
 
 .mouth {
-    width: 50vw;
+    
     height: 50vw;
     background-color: #660099;
     display: grid;
@@ -279,12 +608,12 @@ width: 50%;
     width: 60%;
 
 
-    ;
+    
 }
 
 
 .arrow {
-    width: 50vw;
+    
     height: 50vw;
     background-color: #ff3333;
     display: grid;
