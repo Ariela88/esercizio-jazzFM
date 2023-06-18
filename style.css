@@ -31,6 +31,15 @@ body {
 
 }
 
+@media (max-width:480px) {
+
+    .section1 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    grid-template-areas: "logo ." "play ." "now .";}}
+        
+
 .logo-img {
     grid-area: logo;
 
@@ -98,6 +107,15 @@ body {
     "l-j fm1";
    
 }
+
+@media (max-width:480px) {
+.section3 {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 10% ;
+    grid-template-rows: auto auto auto;
+grid-template-areas: "b-t" "fm1" "l-j";
+}}
 
 .big-text {
     grid-area: b-t;
@@ -189,6 +207,16 @@ margin-left: 25px;
 
 }
 
+
+@media (max-width:480px) {
+    .section4 {
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto ;
+    grid-template-areas: "l-a" "fm2";
+    }}
+
 .letter-a {
     grid-area: l-a;
     width: 80%;
@@ -230,8 +258,23 @@ margin-left: 25px;
     flex-wrap: wrap;
     justify-items: self-start;
 padding-top: 25px;
+display: -webkit-flex;
+min-height: 100vh;
+
    
    
+}
+
+@media (max-width:480px) {
+    .section5 {
+        flex-direction: row;
+        align-items: start;
+    
+        
+        
+    
+    }
+
 }
 
 .little-number {
@@ -282,6 +325,8 @@ width: 50%;
     
 
 }
+
+
 .bg-big2 {
     width: 100%;
 }
@@ -293,8 +338,6 @@ width: 50%;
     width: 100%;
    
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; */
     grid-template-areas: 
     "b-t-2 b-t-2 b-c2"
     ". . mon-li"
@@ -305,6 +348,15 @@ width: 50%;
     ;
 
 }
+
+@media (max-width:480px) {
+    .section7 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(8 1fr) ;
+    grid-template-areas: "b-t-2" "mon-li" "tue-li""wed-li""thu-li""fri-li""sat-li" "sun-li";
+    }}
 
 
 .title-sett-list {
@@ -428,6 +480,15 @@ grid-template-areas: ". l-j" ". l-j";
     
 }
 
+@media (max-width:480px) {
+    .section9 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+    grid-template-areas:  "l-j";
+    }}
+
 .sheep-sticky {
     position: sticky;
     top:0;
@@ -486,6 +547,13 @@ grid-template-areas: ". l-j" ". l-j";
     grid-template-rows: 25% 1fr;
     grid-template-areas: ". b-c3" ". l-c";
 }
+
+@media (max-width:480px) {
+    .section11 {
+   display: flex;
+   flex-wrap: wrap;
+   
+    }}
 
 .contact-sticky {
     position: sticky;
