@@ -14,6 +14,7 @@ body {
     width: 100%;
 
     margin: 0px;
+    overflow: hidden;
 
 }
 
@@ -258,7 +259,7 @@ body {
         margin: auto;
     }
 
-
+    
     
 
 
@@ -811,10 +812,10 @@ width: 10000px;
 
 }
 
-.mouth img {
+.mouth-img {
 
     place-self: center;
-    width: 60%;
+    width: 100%;
 
 
 
@@ -831,11 +832,46 @@ width: 10000px;
 
 }
 
-.arrow img {
+.arrow-rotate {
     place-self: center;
-    width: 60%;
+    width: 100%;
 
 }
+
+.arrow-rotate:hover {
+    animation: arrow-top 0.5s linear;
+    animation-fill-mode: forwards;
+}
+.arrow-rotate:not(hover) {
+    animation: arrow-top 0.5s linear reverse;
+}
+.arrow-rotate:hover {
+    animation: arrow-down 0.5s linear;
+   
+}
+.arrow-rotate:not(hover) {
+    animation: arrow-down 0.5s linear;
+}
+
+
+
+@keyframes arrow-top { 
+    0% {
+        transform: rotate(0deg);
+    }    
+    100% {
+        transform: rotate(-45deg);
+    }    
+}
+@keyframes arrow-down { 
+    0% {
+        transform: rotate(1deg);
+    }    
+    100% {
+        transform: rotate(-45deg);
+    }    
+}
+
 
 
 
