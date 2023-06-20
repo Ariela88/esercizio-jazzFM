@@ -4,29 +4,29 @@
 
 body * {
 
-   
+
     font-family: 'Poppins';
     box-sizing: border-box;
-    
+
 }
 
 body {
     width: 100%;
-    
+
     margin: 0px;
 
 }
 
-.section1 { 
+.section1 {
     background-color: #ffcc00;
-    width: auto;
-    height: auto;
+    width: 100vw;
+
     display: grid;
-    grid-template-columns: 25% 25% 1fr;
-    grid-template-rows: 25% 1fr 25%;
+    grid-template-columns: 400px 1fr 50%;
+    grid-template-rows: 20% 1fr 20%;
     grid-template-areas: "logo . play"
-    ". . play"
-    "now . play";
+        ". . play"
+        "now . play";
 
 
 }
@@ -34,11 +34,27 @@ body {
 @media (max-width:480px) {
 
     .section1 {
+
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
-    grid-template-areas: "logo ." "play ." "now .";}}
-        
+        grid-template-areas: "logo" "play" "now";
+    }
+}
+
+@media (max-width:768px) {
+
+    .section1 {
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "logo" "play" "now";
+    }
+
+
+}
+
 
 .logo-img {
     grid-area: logo;
@@ -47,20 +63,28 @@ body {
 }
 
 .logo-svg {
-    max-width: 100%;
+    width: 60%;
+
     margin: 15px;
 }
 
 .now-play p {
     line-height: 0%;
+    max-width: 100%;
 
 }
-.now-play {
 
+.now-play {
+    align-self: self-end;
     grid-area: now;
     margin: 15px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 200;
+
+}
+
+.light-text {
+    font-weight: 300;
 }
 
 .bold-text {
@@ -78,12 +102,17 @@ body {
 
 .play-img {
     grid-area: play;
+    width: 100%;
+    height: 100%;
+
+
 
 
 }
 
 .play-svg {
     max-width: 100%;
+
 
 }
 
@@ -98,24 +127,34 @@ body {
 
 .section3 {
     background-color: #ffcc00;
-    width: auto;
-    height: auto;
+
     display: grid;
-    grid-template-columns: 70% 1fr;
-    
-    grid-template-areas: "b-t b-c"
-    "l-j fm1";
-   
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas: "b-t b-t b-c"
+        "l-j . fm1";
+
 }
 
-@media (max-width:480px) {
-.section3 {
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 10% ;
-    grid-template-rows: auto auto auto;
-grid-template-areas: "b-t" "fm1" "l-j";
-}}
+
+
+
+/* come far funzionare una regola in media query solo per le singole class??? */
+
+/* @media (max-width:480px) {
+.big-text {
+    
+        font-size: 124px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 122px;
+        letter-spacing: -10px;
+        margin: 0;
+ 
+}} */
+
+
+
 
 .big-text {
     grid-area: b-t;
@@ -123,10 +162,10 @@ grid-template-areas: "b-t" "fm1" "l-j";
 }
 
 .big-text-inside {
-    font-size: 200px;
+    font-size: 320px;
     font-weight: 600;
     text-transform: uppercase;
-    line-height: 170px;
+    line-height: 250px;
     letter-spacing: -10px;
     margin: 0;
 }
@@ -151,43 +190,55 @@ grid-template-areas: "b-t" "fm1" "l-j";
 } */
 
 .letter-j-svg {
- width: 50%;
-margin-left: 25px;
- margin-top: -150px;
-  vertical-align: middle;
-  position: relative;
-  top: 0px;
-    
+    width: 60%;
+    margin-left: 15px;
+    margin-top: -220px;
+    vertical-align: middle;
+    position: relative;
+    top: 0px;
+    max-width: 80%;
+    grid-area: l-j;
+
 }
 
 .fm-list1 {
     grid-area: fm1;
     grid-row-start: 1;
-    margin-top: 300px;
-    
-    
-    
+    align-self: flex-end;
+
 
 }
+
+.space-blank {
+    text-align: right;
+}
+
+
 
 
 .title-fm1 {
 
     font-size: 100px;
     font-weight: 300;
-    border-bottom: 1px solid ;
+    border-bottom: 1px solid;
     padding-bottom: -50px;
 }
 
 
 
 
-
-.tuner-list, .list1-element {
+.tuner-list,
+.list1-element {
     padding: 24px;
     font-size: 24px;
     font-weight: 300;
     border-bottom: 1px solid;
+
+}
+
+.list1-element {
+    display: flex;
+    justify-content: space-between;
 }
 
 .space-blank {
@@ -195,14 +246,34 @@ margin-left: 25px;
     width: 100px;
 }
 
-.section4 {
+@media (max-width:480px) {
+    .section3 {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 1fr;
 
+        grid-template-areas: 
+        "b-t"
+        "fm1";
+        margin: auto;
+    }
+
+
+    
+
+
+
+}
+
+
+.section4 {
+    padding-top: 50px;
     background-color: #ffcc00;
     width: auto;
     height: auto;
     display: grid;
     grid-template-columns: 25% 1fr;
-    grid-row: 25% 1fr ;
+    grid-row: 25% 1fr;
     grid-template-areas: "fm2 l-a" "fm2 l-a";
 
 }
@@ -212,23 +283,25 @@ margin-left: 25px;
     .section4 {
         width: auto;
         display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: auto auto ;
-    grid-template-areas: "l-a" "fm2";
-    }}
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "l-a" "fm2";
+    }
+}
 
 .letter-a {
     grid-area: l-a;
-    width: 80%;
-    justify-self: center;
-    
-    
+    width: 100%;
+    padding-right: 0;
+
+
+
 }
 
 .letter-a-svg {
     width: 100%;
-    
-    
+
+
 }
 
 .list2 {
@@ -242,11 +315,12 @@ margin-left: 25px;
     font-size: 50px;
 
 }
+
 .list2-element {
     border-bottom: 1px solid black;
     font-size: 30px;
     margin: 20px;
-   
+
 }
 
 .section5 {
@@ -257,25 +331,15 @@ margin-left: 25px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-items: self-start;
-padding-top: 25px;
-display: -webkit-flex;
-min-height: 100vh;
+    padding-top: 25px;
+    display: -webkit-flex;
+    min-height: 100vh;
 
-   
-   
-}
 
-@media (max-width:480px) {
-    .section5 {
-        flex-direction: row;
-        align-items: start;
-    
-        
-        
-    
-    }
 
 }
+
+
 
 .little-number {
     font-size: 60px;
@@ -289,10 +353,13 @@ min-height: 100vh;
     text-align: right;
     font-weight: 300;
     border-bottom: 1px solid black;
-    margin-right: 25px;
+    padding-right: 500px;
+
 }
+
 .title-device {
-width: 50%;
+    text-align: left;
+    width: 50%;
     font-size: 80px;
     border-bottom: 1px solid black;
     font-weight: 300;
@@ -313,16 +380,31 @@ width: 50%;
 
 .letter-double-j {
     width: 45%;
-    margin: 20px;
+    max-width: 100%;
+    margin: 30px auto;
+
 }
+
 .letter-double-j-svg {
     width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width:480px) {
+    .section5 {
+        flex-direction: column;
+        align-items: start;
+        flex-wrap: wrap;
+
+    }
+
+
 }
 
 .section6 {
     background-color: #660099;
     display: block;
-    
+
 
 }
 
@@ -336,58 +418,115 @@ width: 50%;
 
 .section7 {
     width: 100%;
-   
+    align-content: flex-start;
     display: grid;
-    grid-template-areas: 
-    "b-t-2 b-t-2 b-c2"
-    ". . mon-li"
-    "tue-li wed-li ."
-    ". thu-li ."
-    ". . fri-li"
-    "sat-li sun-li ."
+    grid-template-columns: repeat(3, 33%);
+    grid-template-areas:
+        "b-t-2 b-t-2 b-c2"
+        ". . mon-li"
+        "tue-li wed-li ."
+        ". thu-li ."
+        ". . fri-li"
+        "sat-li sun-li ."
     ;
 
 }
 
 @media (max-width:480px) {
     .section7 {
-        width: 100%;
+        width: 100vw;
+        justify-content: start;
         display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: repeat(8 1fr) ;
-    grid-template-areas: "b-t-2" "mon-li" "tue-li""wed-li""thu-li""fri-li""sat-li" "sun-li";
-    }}
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "b-t-2"
+            "mon-li"
+            "tue-li"
+            "wed-li"
+            "thu-li"
+            "fri-li"
+            "sat-li"
+            "sun-li";
+    }
+
+}
+
+@media (max-width:768px) {
+    .section7 {
+        width: 100vw;
+        justify-content: start;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "b-t-2"
+            "mon-li"
+            "tue-li"
+            "wed-li"
+            "thu-li"
+            "fri-li"
+            "sat-li"
+            "sun-li";
+    }
+
+    .schedule-txt {
+        margin-top: 100px !important;
+        font-size: 150px !important;
+        line-height: 120px !important;
+
+    }
+
+}
 
 
 .title-sett-list {
-    border-top: none!important;
+    border-top: none !important;
     font-size: 100px;
     font-weight: 300;
 
 }
+
 .sett-list {
     font-size: 24px;
     font-weight: 300;
-    
+
 }
 
 .sett-item-list {
-    border-top: 0.5px solid rgb(78, 78, 78);
+    border-bottom: 0.5px solid rgb(180, 178, 178);
     margin: 20px;
     padding-top: 20px;
+    padding-bottom: 12px;
 }
 
 .big-text2 {
-    width: 50%;
+
     grid-area: b-t-2;
     line-height: 20px;
-    margin-top: -100px; 
+    margin-top: -100px;
+    max-width: 100%;
+
+}
+
+.schedule-txt {
+    font-size: 300px;
+    line-height: 250px;
+    margin-top: -100px;
+    max-width: 100%;
+
+
 }
 
 .big-circle2 {
-    width: 60%;
+    width: 80%;
     grid-area: b-c2;
-   justify-self: end;
+    justify-self: end;
+}
+
+.bc-svg2 {
+    margin-top: 100px;
+
 }
 
 
@@ -396,26 +535,32 @@ width: 50%;
     width: 100%;
     grid-area: mon-li;
 }
+
 .tue-list {
     width: 100%;
     grid-area: tue-li;
 }
+
 .wed-list {
     width: 100%;
     grid-area: wed-li;
 }
+
 .thu-list {
     width: 100%;
     grid-area: thu-li;
 }
+
 .fri-list {
     width: 100%;
     grid-area: fri-li;
 }
+
 .sat-list {
     width: 100%;
     grid-area: sat-li;
 }
+
 .sun-list {
     width: 100%;
     grid-area: sun-li;
@@ -426,29 +571,35 @@ width: 50%;
     background-color: #ffcc00;
     width: 100%;
     height: 100%;
-    
-    
-    
+
+
+
 
 }
 
 .anim-contain {
-    
-    
+
+width: 10000px;
     animation: 10s linear 0s infinite normal none running textscroll;
-    transform: translateX(0);
+    transform:translateX(0);
     
+   
     
-    
+
+
+
 }
 
 .scorr-text p {
     font-size: 200px;
-    border-top:1px solid black ;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin: 50px;
+    animation-name: textscroll;
+    text-align: center;
     
-    
-    
+
+
+
 }
 
 
@@ -457,51 +608,44 @@ width: 50%;
     width: 100%;
     display: flex;
     align-content: center;
-    
-    
+
+
 
 }
+
 .keyboard-svg {
     width: 60%;
     margin: auto;
 
-   
-    
+
+
 }
 
 .section9 {
     height: auto;
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-grid-template-areas: ". l-j" ". l-j";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". l-j" ". l-j";
 
-    background-color:#0099ff;
-    
+    background-color: #0099ff;
+
 }
 
-@media (max-width:480px) {
-    .section9 {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr ;
-    grid-template-areas:  "l-j";
-    }}
 
 .sheep-sticky {
     position: sticky;
-    top:0;
+    top: 0;
     width: 100%;
-    
-  
-    
-    
+
+
+
+
 }
 
 .sheep-svg {
-    width: 70%;
-    
+    width: 50%;
+
 }
 
 .list-jazz-title {
@@ -511,8 +655,8 @@ grid-template-areas: ". l-j" ". l-j";
     grid-area: l-j-t;
     margin: 0;
 
-    
-    
+
+
 }
 
 .list-jazz-item {
@@ -521,11 +665,11 @@ grid-template-areas: ". l-j" ". l-j";
     font-weight: 100;
     border-top: 1px solid white;
     padding: 30px;
-    
+
 }
 
 .list-jazz {
-    grid-area:l-j ;
+    grid-area: l-j;
 
 }
 
@@ -537,6 +681,17 @@ grid-template-areas: ". l-j" ". l-j";
 .bg-3 {
     width: 100%;
 }
+
+@media (max-width:480px) {
+    .section9 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "l-j";
+    }
+}
+
 
 
 .section11 {
@@ -550,15 +705,17 @@ grid-template-areas: ". l-j" ". l-j";
 
 @media (max-width:480px) {
     .section11 {
-   display: flex;
-   flex-wrap: wrap;
-   
-    }}
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
 
 .contact-sticky {
     position: sticky;
-    top:0;
+    top: 0;
 }
+
 .text-sticky {
     font-size: 200px;
     font-weight: 600;
@@ -580,24 +737,24 @@ grid-template-areas: ". l-j" ". l-j";
 .black-circle3 {
     grid-area: b-c3;
     width: 100%;
-    
+
 }
-.black-circle-svg3 
-{
+
+.black-circle-svg3 {
     width: 25%;
     float: right;
     margin: 20px;
-    
+
 }
 
 .small-text {
     font-size: 24px;
     font-weight: 300;
-    
+
 }
 
 .text-row {
-    
+
     display: flex;
     justify-content: space-between;
 }
@@ -606,7 +763,7 @@ grid-template-areas: ". l-j" ". l-j";
     font-size: 116px;
     font-weight: 300;
     display: flex;
-    letter-spacing: -5px;                       
+    letter-spacing: -5px;
 
 }
 
@@ -629,28 +786,12 @@ grid-template-areas: ". l-j" ". l-j";
 }
 
 
-
-
-
-
-
-
-
-
 @keyframes textscroll {
-  
+
     100% {
-        transform:translateX(-5000px)  
+        transform: translateX(-5000px)
     }
 }
-
-
-
-
-
-
-
-
 
 
 .last-section {
@@ -661,7 +802,7 @@ grid-template-areas: ". l-j" ". l-j";
 
 
 .mouth {
-    
+
     height: 50vw;
     background-color: #660099;
     display: grid;
@@ -676,12 +817,12 @@ grid-template-areas: ". l-j" ". l-j";
     width: 60%;
 
 
-    
+
 }
 
 
 .arrow {
-    
+
     height: 50vw;
     background-color: #ff3333;
     display: grid;
@@ -695,12 +836,6 @@ grid-template-areas: ". l-j" ". l-j";
     width: 60%;
 
 }
-
-
-
-
-
-
 
 
 
